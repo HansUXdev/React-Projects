@@ -18,7 +18,7 @@ export default class index extends Component {
 
 <React.Fragment>
   <Layout >
-
+    
     <HomeHero />
     <ExperianceCounter />
     <AboutSection />

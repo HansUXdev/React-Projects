@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Typist from 'react-typist';
+import VTxt from '../components/Textvideo';
 
 export default function HomeHero () {
 
@@ -17,7 +18,11 @@ export default function HomeHero () {
             <div className="container">
               <h1 className="intro-title mb-4">I'm a</h1>
               {/* <p c2> */}
-                <Typist className="intro-subtitle">Developer, Maker, Gamer, Husband, Father</Typist>
+                <Typist className="intro-subtitle">
+                  <VTxt text="Developer" />
+                  Developer, Maker, Gamer, Husband, Father
+                
+                </Typist>
                 {/* <strong className="text-slider"> */}
               {/* </p> */}
               {/* <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> */}
