@@ -11,7 +11,7 @@
 
 
 
-# Portfolio Gallary  
+# Portfolio Gallery  
 
   ## React-Portfolio
   ![React-Portfolio](https://user-images.githubusercontent.com/5007073/86385020-72520f80-bc44-11ea-94f4-72c5d4a1d9f3.gif)

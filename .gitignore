@@ -1,5 +1,6 @@
 #
 node_modules
+
 # WP example
 /wp/wp-admin
 /wp/wp-content
@@ -19,8 +20,8 @@ node_modules
 /NativeApps/AntiFraud
 /ionic-react/
 
-# The nagging wife app
-/NativeApps/Nagger
+# 
+/Lynda
 
 
 PotentialApps.md
