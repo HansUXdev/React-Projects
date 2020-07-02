@@ -2,7 +2,7 @@
   return (
     <>
       <div >
-        
+ 
         <video autoplay playsInline muted loop preload 
           {
             (props.poster) ? poster=props.poster : poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/oceanshot.jpg"

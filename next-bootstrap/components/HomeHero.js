@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Typist from 'react-typist';
-import VTxt from '../components/Textvideo';
+// import VTxt from '../components/Textvideo';
 
 export default function HomeHero () {
-
+ 
   // Define Theme colors
   const BGcolor ="#000000";
   const TXTcolor ="#fff";
@@ -19,7 +19,7 @@ export default function HomeHero () {
               <h1 className="intro-title mb-4">I'm a</h1>
               {/* <p c2> */}
                 <Typist className="intro-subtitle">
-                  <VTxt text="Developer" />
+                  {/* <VTxt text="Developer" /> */}
                   Developer, Maker, Gamer, Husband, Father
                 
                 </Typist>
