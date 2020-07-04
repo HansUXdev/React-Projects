@@ -1,5 +1,6 @@
 import React from "react";
-import ToggleBTN from './useState/toggleBtn';
+import ToggleBTN from './useState/subscribeBTN/toggleBtn';
+import StarRating from './useState/ProductRating/ProductRating';
 
 // Center Everything 
 const bodyStyle = {
@@ -16,6 +17,7 @@ function App() {
         <div style={bodyStyle}>
             <h2>Use State:</h2>
             <ToggleBTN />
+            <StarRating totalStars={5} />
 
         </div>
 
