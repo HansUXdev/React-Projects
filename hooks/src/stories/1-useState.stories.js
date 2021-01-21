@@ -6,24 +6,18 @@ import StarRating from '../useState/ProductRating/ProductRating'
 import ToggleBTN from '../useState/subscribeBTN/toggleBtn'
 
 export default {
-    title: 'useState',
-    component: Button,
+    title: 'SubscribedBTN',
+    component: ToggleBTN,
 };
 
-export const SubscribeBTN = () => (
+export const UnsubscribedBTN = () => (
     <ToggleBTN />
 );
-// // import StarRating from './useState/ProductRating/ProductRating';
-export const ProductRating = () => {
-    return <StarRating totalStars={5} /> 
-}
 
-// export const Emoji = () => (
-//     <Button onClick={action('clicked')}>
-//         <span role="img" aria-label="so cool">
-//             😀 😎 👍 💯
-//         </span>
-//     </Button>
-// );
+export const SubscribedBTN = () => (
+    <ToggleBTN />
+);
+
+
 
 

@@ -2,6 +2,8 @@
 
 
 # Reading / Resources
+1. [CSS to React](https://staxmanade.com/CssToReact/)
+2. [SVG 2 JSX](https://svg2jsx.com/)
 
 ## Hooks
 1. [useFetchHooks](https://scotch.io/tutorials/create-a-custom-usefetch-react-hook)
