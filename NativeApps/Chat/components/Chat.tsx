@@ -77,8 +77,7 @@ export default function Chat() {
             await Promise.all(writes)
         }
     // Initial View
-    // if a username has not been set with setName
-    //  
+    // if a username has not been set with setName 
     if (!user) {
         return (
             <View style={styles.container}>
@@ -88,7 +87,7 @@ export default function Chat() {
         )
     }
     // else render GiftedChat
-    return <GiftedChat messages={messages} user={user} onSend={handleSend} />
+    return <GiftedChat renderUsernameOnMessage={true} messages={messages} user={user} onSend={handleSend} />
 }
 
 const styles = StyleSheet.create({
