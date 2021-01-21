@@ -7,6 +7,8 @@ import { StyleSheet, TextInput, View, YellowBox, Button } from 'react-native'
 import * as firebase from 'firebase'
 import 'firebase/firestore'
 
+// this obviously shouldn't be committed for security reasons...
+// It's better to store as a json file and reference throughout yout app, but this is just a prototype anyway...
 const firebaseConfig = {
     //Your firebase config here
   apiKey: 'AIzaSyBndP6dXRd5ULzNj9QEXp0QAzOyIhSFUas',
@@ -49,30 +51,34 @@ export default function Chat() {
         return () => unsubscribe()
     }, [])
 
-    const appendMessages = useCallback(
-        (messages) => {
-            setMessages((previousMessages) => GiftedChat.append(previousMessages, messages))
-        },
-        [messages]
-    )
+    /* Utility Functions */
+        const appendMessages = useCallback(
+            (messages) => {
+                setMessages((previousMessages) => GiftedChat.append(previousMessages, messages))
+            },
+            [messages]
+        )
 
-    async function readUser() {
-        const user = await AsyncStorage.getItem('user')
-        if (user) {
-            setUser(JSON.parse(user))
+        async function readUser() {
+            const user = await AsyncStorage.getItem('user')
+            if (user) {
+                setUser(JSON.parse(user))
+            }
         }
-    }
-    async function handlePress() {
-        const _id = Math.random().toString(36).substring(7)
-        const user = { _id, name }
-        await AsyncStorage.setItem('user', JSON.stringify(user))
-        setUser(user)
-    }
-    async function handleSend(messages) {
-        const writes = messages.map((m) => chatsRef.add(m))
-        await Promise.all(writes)
-    }
+        async function handlePress() {
+            const _id = Math.random().toString(36).substring(7)
+            const user = { _id, name }
+            // 
+            await AsyncStorage.setItem('user', JSON.stringify(user))
+            setUser(user)
+        }
+        async function handleSend(messages) {
+            const writes = messages.map((m) => chatsRef.add(m))
+            await Promise.all(writes)
+        }
     // Initial View
+    // if a username has not been set with setName
+    //  
     if (!user) {
         return (
             <View style={styles.container}>
@@ -81,6 +87,7 @@ export default function Chat() {
             </View>
         )
     }
+    // else render GiftedChat
     return <GiftedChat messages={messages} user={user} onSend={handleSend} />
 }
 

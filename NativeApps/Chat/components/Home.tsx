@@ -12,7 +12,7 @@ export function Login( {navigation}) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Logging on...</Text>
-      {user ? <ChatRoom /> : <SignIn />}
+      {/* {user ? <ChatRoom /> : <SignIn />} */}
     </View>
   );
 }
